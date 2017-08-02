@@ -12,8 +12,10 @@
     <main class="container">
         <section class="">
             <h1>FETCH API USING</h1>
+            <p>Une API sert à manipuler des données.</p>
+            <p>Je dois savoir manipuler les : code(erreur) headers données verbe(get, post) = protocole->http</p>
             <div class="">
-                    <form action="new-article.php" method="POST">
+                    <form id="form" action="new-article.php" method="POST">
                         <fieldset>
                         <label for="title">Ajoute un titre</label>
                         <input type="text" id="title" name="title" placeholder="exemple titre: Fetch API">
@@ -27,17 +29,31 @@
             <script>
                     document.querySelector("#send-submit")
                         .addEventListener("click", function(e) {
-                            e.preventDefault;
+                            e.preventDefault();
+                            let form = document.querySelector("#form")
+                            let title = document.querySelector("#title").value;
                             let content = document.querySelector("#content").value;
+                            let jsonData = JSON.stringify({title:title,content:content});
+                            console.log("Renvoie les données du forme sous des données JSON : " + jsonData);
                             //Fecth
-                            fetch("new-article.php" , {
-                                method: "post",
-                                body: new FormData(form)
+                            fetch("http://192.168.1.152:8080/article/?id=djaafar" , {
+                                method: "POST",
+                                //Voir la doc
+                                body: jsonData,
+                                //Génère mes données du form en json.
+                                headers: {
+                                    "Content-Type": "application/json" //https://fr.wikipedia.org/wiki/Type_MIME
+                                },
                             })
                             .then(function(response) {
                                 //console.log(content);
-                                response.text();
+                                //l'object response + sa proprieter.
+                                console.log(response.status);
+                                return response.text();
                                 //console.log(response);
+                            })
+                            .then(function(text) {
+                                console.log(text);
                             })
                             .catch(function(error) {
                                 console.error(error.message)
