@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>Fetch API</title>
+</head>
+<body>
+    
+    <main class="container">
+        <section class="">
+            <h1>FETCH API USING</h1>
+            <div class="">
+                    <form action="new-article.php" method="POST">
+                        <fieldset>
+                        <label for="title">Ajoute un titre</label>
+                        <input type="text" id="title" name="title" placeholder="exemple titre: Fetch API">
+                        <textarea name="content" id="content" cols="30" rows="3" placeholder="Ajoute du contenus..."></textarea>
+                        <input class="btn btn-primary" type="submit" id="send-submit" value="Send serveur">
+                        </fieldset>
+                    </form>
+            </div>
+            
+            <!-- Add event and send in post to the page new-article.php with fetch. -->
+            <script>
+                    document.querySelector("#send-submit")
+                        .addEventListener("click", function(e) {
+                            e.preventDefault;
+                            let content = document.querySelector("#content").value;
+                            //Fecth
+                            fetch("new-article.php" , {
+                                method: "post",
+                                body: new FormData(form)
+                            })
+                            .then(function(response) {
+                                //console.log(content);
+                                response.text();
+                                //console.log(response);
+                            })
+                            .catch(function(error) {
+                                console.error(error.message)
+                            })
+                        })
+            </script>
+        </section>
+    </main>
+</body>
+</html>
