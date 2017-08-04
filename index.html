@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJgAAACYCAMAAAAvHNATAAAAgVBMVEX///8AAABqamo7Ozv8/PwGBgby8vIJCQnv7+/39/ciIiLCwsI2Njbm5uYRERHR0dEcHBxISEirq6tbW1tDQ0MwMDAWFhZ4eHhTU1OJiYna2tqoqKjLy8vj4+ORkZG5ubmbm5twcHB9fX1jY2OKiooqKiqWlpafn5+zs7NOTk5XV1docSCGAAAFMUlEQVR4nO2aa5eqOgyGAYGCXBUQRR1GvPv/f+BmdIYgbWg745x91l55PkpbXpukSVsMgyAIgiAIgiAIgiAIgiAIgiAIgvjXcPeTL27R3xbTJ2HmF1f7v3qpG8jbvHW6zPfnJ4H7G5pavFNqSRv5eacrrZ4fWdPTb0hz6wkz5cI2aSdsOZBhmSwP/FfrqrIP35EL61nyNHhktb/F1valsrblw6XlwiadLjaMSev+c7x6Xax656NjqgmrICbz4bOHMNMJ5y9ytWDWvUwq7ASWfEOEtXN5S14ga5PBu6TC3CvEJPdyC8ZxdpWouzr2tkxNDWHVoms64+LP6o90fPN+outcmKaOsPOIJZ+FtcoVVmsxfh2aAyTCbPDGmLfVQJjpfM/V7GQfD3XJhCXTruWVj7yhMNOcNvqrmrdKuXGkws5O1/LAP+WFmWZx0Uv07vtUMIpUGFiSCaJOJKxd7gJ1aX49Y8JBJMI86DURPBYLMxfKS8fWQmTJhK2hocCSmLDW1d5VUntU8j7fsRrr6d+6dulG8LzExw3nMnt6Z26J6HDC8+iiWIFf5qJsGFkLdOw424xK28wctG96kpQFc9nM2r2syw/f4Kk9yXBZCilk2TUWxeSn+An6htbVxNK2wpXrs09ZSYN6K7Hkg+ggXoju/0dU4Npz3LmYpZI71hDLozGSWLhdYmvgLnadjzRWWmdsKI9iyf9Iruh6ZMaHnjQ7weNlkW3U9g8eDBFKY39eoLPmhJfOEZD889FqprytqaHXqCUfRA2+dLDsYaLtEmvhLNVLJnsPkyxaXTm8Eo+1uG7n3M2Qpyy/aGwatlBS5mq16ZgDpcFTMD1RrLX2Mhdwmka5U3ATv7stbz1DvBhP5ppbZrCko7PPSDJxZmZrQ2BpJ5RlHw4P4ifUmml/sxf62s3gLens9PfKFxim0T182uwE3jQ1BEsF2ynFVQ8baq1Yf/MT7fhVjRlC/0v3isvqJ96x61ronudEp1Cw2qZYVMaZzt4qgI7qMXnHR3L0zPDQLHlTN8p3LemuC/G726g0AnQFXliJmiNH8K8nGoHjXnIsm2fuR2WBF/lpqbSK1zB+qa4rWKKZfPnYCD9OC5FZaxSmYAftVT3TD/Aqfnr+auVeRIHxwCnmslnzISaPajHpBxleaD05UHTA7cmukmkIdC1ZWfjb8nrg19FIY2e0trZhw6gUkwm+oRZuMFur4x2mb7ireRCThTRP2lWJ70bSlfj0BztKuTO5oDMA/rmT6fJGNknOHreL2+BlpXlFzmXAkkxiyeiED+/MRhO0vUEKpA/S4ebqMQmwhw1HlxbvjMe+KTl+MMY3mMKgCyDwd6OJYoWPG5cqCcPHXU10DNXA4/FqCT2GYsr3ONUOWf4EwmxIw9PxzIoIY7NavVKyA3HNIRDWuziVxKRYGHaUgkq7iAoSgTDwnLjWF5au9O8htg3varywXjlXSByYFxbvFeuqAcltGN68sJ4lZdcmnLBQw7kGDI8A+XeDJR1ZnhwIK84/ucv33o6jwnx1Sz4Lm5Y/veqt+nsrTljvCtySTUBfWKa7QRSR3Bgq7ACWlMRkT5jz/Yu3Z9x5iF09Q55MpY78dfV8lKZFdaJVLBQWgZn30kEewtg3btzG2N4L3KEw+JiBoeXakzC2/+GdM48f5NwHIb0r8EI+D5bJJvWvfKtymg6EVamGJQ0rPb3OuZ4ZfnTU+5hBGpO/+NERhw2WPP6vPhWLbt03bM3LPyYiCIIgCIIgCIIgCIIgCIIgCIIg/jp/ACsJPg7WGLOuAAAAAElFTkSuQmCC" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <title>Fetch API</title>
 </head>
@@ -27,6 +28,12 @@
             
             <!-- Add event and send in post to the page new-article.php with fetch. -->
             <script>
+                /*
+                Principe : Envoyer au serveur avec la method POST les infos du formulaire
+                généré en json et renvoyer vie le php des code erreur.
+
+                Format de données, sert a l'échange de données.
+                */
                     document.querySelector("#send-submit")
                         .addEventListener("click", function(e) {
                             e.preventDefault();
@@ -36,7 +43,7 @@
                             let jsonData = JSON.stringify({title:title,content:content});
                             console.log("Renvoie les données du forme sous des données JSON : " + jsonData);
                             //Fecth
-                            fetch("http://192.168.1.152:8080/article/?id=djaafar" , {
+                            fetch("http://192.168.1.152:8080/article/djaafar/" , { // /article?id=djaafar
                                 method: "POST",
                                 //Voir la doc
                                 body: jsonData,
@@ -61,6 +68,60 @@
                         })
             </script>
         </section>
+        <section id="display">
+            <h2>Article</h2>
+            <script>
+            "use strict";
+            function display() {
+                let section = document.querySelector("#display");
+                section.innerHTML = ""; //écrase tout.
+                //desc met dans l'ordre.
+                fetch("http://192.168.1.152:8080/article/djaafar/desc", { 
+                    method: "get"
+                })
+                .then(function(response){
+                    console.log(response.status);
+                    return response.json();
+                })
+                .then(function(json) {
+                    console.log(json);
+                    for (let boucle of json) {
+                        let article = document.createElement("article");
+                        let h2 = document.createElement("h2");
+                        let paraf = document.createElement("p");
+                        let button = document.createElement("button");
+                        h2.textContent = boucle.title;
+                        p.textContent = boucle.content;
+                        button.textContent = "delete";
+                        button.dataset.title = boucle.title; // permet d'ajouter des données a un élement html.
+                        button.addEventListener("click", deleteArticleListenenr);
+                        section.appendChild(article);
+                        article.appendChild(h2);
+                        article.appendChild(p);
+                        article.appendChild(button);
+                        display();
+                    }
+                })
+                .catch(function(error) {
+                    console.log(response.error);
+                })
+            }
+            display();
+
+            //Pour recuperer le
+            function deleteArticleListenenr(event) {
+                let button = event.currentTarget; //recuperer le button.
+                console.log(button); // on recupere le nom de l'event en cliquant sur le btn.
+                //Manque plus que le requete.
+                fetch("http://192.168.1.152:8080/article/djaafar/desc" , {
+                    method: "DELETE"
+                })
+                .then()
+                
+            }
+            </script>
+        </section>
+        
     </main>
 </body>
 </html>

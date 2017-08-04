@@ -26,3 +26,15 @@ An API is available at http://192.168.1.152:8080/, you can get the code at https
     - the server expects an URL parameter: id={name}
     - the server expects a valid Content-Type
     - the server will answer using HTTP status
+
+    Instructions: Get JSON
+
+Once we have sent our data to the API we are able to retrive them at http://192.168.1.152:8080/articles/ and update our page to display the articles. You will need to update index.html to:
+
+1. add a section element to display the article
+2. add a display function in a script to:
+    - retrieve data from the server using fetch
+    - transform the data into a JS object
+    - loop over the object and create an article containing a title and a p
+3. all display when you start the script
+4. call display when the user post a new article
